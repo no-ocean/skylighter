@@ -5,6 +5,7 @@ const workScreen = document.querySelector(".wrapper"),
 let clipPath, x, y, dY;
 let radius = 80;
 
+// set wheel zoom in and zoom out 
 workScreen.addEventListener("wheel", function(event) {
     dY = event.deltaY;
     radius = radius + -dY/10;
@@ -18,6 +19,7 @@ workScreen.addEventListener("wheel", function(event) {
     lighter.setAttribute("style", clipPath);
 });
 
+// set mouse coordinates
 workScreen.addEventListener("mousemove", function(event) {
     x = event.clientX;
     y = event.clientY;
